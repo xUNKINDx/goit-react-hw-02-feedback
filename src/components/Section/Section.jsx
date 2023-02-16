@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
+import PropTypes from 'prop-types';
 
 class Section extends Component {
   render() {
@@ -13,5 +13,7 @@ class Section extends Component {
     );
   }
 }
+
+Section.propTypes = {}
 
 export default Section;

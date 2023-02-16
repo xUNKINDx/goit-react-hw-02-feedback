@@ -13,35 +13,10 @@ class App extends Component {
 
   constructor() {
     super();
-    // this.handleClick = this.handleClick.bind(this);
     this.handleGoodClick = this.handleGoodClick.bind(this);
     this.handleNeutralClick = this.handleNeutralClick.bind(this);
     this.handleBadClick = this.handleBadClick.bind(this);
   }
-
-  // handleClick(event) {
-  //   this.setState(prevState => {
-  //     switch (event.target.dataset.type) {
-  //       case 'good':
-  //         return {
-  //           good: prevState.good + 1,
-  //         };
-
-  //       case 'neutral':
-  //         return {
-  //           neutral: prevState.neutral + 1,
-  //         };
-
-  //       case 'bad':
-  //         return {
-  //           bad: prevState.bad + 1,
-  //         };
-
-  //       default:
-  //         console.error('Unknown button type', event.target.dataset.type);
-  //     }
-  //   });
-  // }
 
   handleGoodClick() {
     this.setState(prevState => {
