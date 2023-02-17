@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FeedbackOptions extends Component {
   render() {
@@ -12,6 +13,12 @@ class FeedbackOptions extends Component {
       </>
     );
   }
+}
+
+FeedbackOptions.propTypes = {
+  handleGoodClick: PropTypes.func.isRequired,
+  handleNeutralClick: PropTypes.func.isRequired,
+  handleBadClick: PropTypes.func.isRequired,
 }
 
 export default FeedbackOptions;
