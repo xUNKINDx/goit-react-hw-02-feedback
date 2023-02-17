@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ButtonList, Button } from './FeedbackOptions.style';
 
 class FeedbackOptions extends Component {
   render() {
@@ -7,9 +8,27 @@ class FeedbackOptions extends Component {
 
     return (
       <>
-        <button onClick={handleGoodClick}>Good</button>
-        <button onClick={handleNeutralClick}>Neutral</button>
-        <button onClick={handleBadClick}>Bad</button>
+      <section>
+        <ul style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 40,
+        color: '#010101',
+      }}>
+          <li>
+            <button className="button" onClick={handleGoodClick}>
+              Good
+            </button>
+          </li>
+          <li>
+            <button className="button" onClick={handleNeutralClick}>Neutral</button>
+          </li>
+          <li>
+            <button className="button" onClick={handleBadClick}>Bad</button>
+          </li>
+        </ul>
+        </section>
       </>
     );
   }
@@ -19,6 +38,6 @@ FeedbackOptions.propTypes = {
   handleGoodClick: PropTypes.func.isRequired,
   handleNeutralClick: PropTypes.func.isRequired,
   handleBadClick: PropTypes.func.isRequired,
-}
+};
 
 export default FeedbackOptions;

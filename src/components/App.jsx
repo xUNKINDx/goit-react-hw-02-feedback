@@ -44,7 +44,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        height: '100vh',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 40,
+        color: '#010101',
+      }}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             handleGoodClick={this.handleGoodClick}
