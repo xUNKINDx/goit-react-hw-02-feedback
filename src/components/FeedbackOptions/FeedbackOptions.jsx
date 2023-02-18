@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ButtonList, Button } from './FeedbackOptions.style';
 
 class FeedbackOptions extends Component {
   render() {
@@ -12,6 +11,7 @@ class FeedbackOptions extends Component {
         <ul style={{
         display: 'flex',
         justifyContent: 'center',
+        padding: '0',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',

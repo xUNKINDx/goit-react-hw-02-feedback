@@ -22,21 +22,24 @@ class Statistics extends Component {
 
     return (
       <>
-        <li>
-          <p>Good: {good}</p>
-        </li>
-        <li>
-          <p>Neutral: {neutral}</p>
-        </li>
-        <li>
-          <p>Bad: {bad}</p>
-        </li>
-        <li>
-          <p>Total: {countTotalFeedback()}</p>
-        </li>
-        <li>
-          <p>Positive feedback: {countPositiveFeedbackPercentage()}%</p>
-        </li>
+        <ul style={{display: 'flex',
+      flexDirection: 'column'}}>
+          <li>
+            <p>Good: {good}</p>
+          </li>
+          <li>
+            <p>Neutral: {neutral}</p>
+          </li>
+          <li>
+            <p>Bad: {bad}</p>
+          </li>
+          <li>
+            <p>Total: {countTotalFeedback()}</p>
+          </li>
+          <li>
+            <p>Positive feedback: {countPositiveFeedbackPercentage()}%</p>
+          </li>
+        </ul>
       </>
     );
   }
@@ -48,6 +51,6 @@ Statistics.propTypes = {
   bad: PropTypes.number.isRequired,
   countTotalFeedback: PropTypes.number.isRequired,
   countPositiveFeedbackPercentage: PropTypes.number.isRequired,
-}
+};
 
 export default Statistics;
