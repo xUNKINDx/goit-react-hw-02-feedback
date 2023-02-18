@@ -10,7 +10,7 @@ class FeedbackOptions extends Component {
       <section>
         <ul style={{
         display: 'flex',
-        justifyContent: 'center',
+        marginLeft: '30px',
         padding: '0',
         alignItems: 'center',
         fontSize: 40,
