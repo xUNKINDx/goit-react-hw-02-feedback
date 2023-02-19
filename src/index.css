@@ -23,7 +23,8 @@ li {
   list-style: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 37px;
   margin-left: 20px;
 }

@@ -1,43 +1,39 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class FeedbackOptions extends Component {
-  render() {
-    const { handleGoodClick, handleNeutralClick, handleBadClick } = this.props;
+const FeedbackOptions = props => {
+  const { options, onLeaveFeedback } = props;
 
-    return (
-      <>
+  const items = options.map((option, index) => (
+    <li key={index}>
+      <button className="button" name={option} onClick={onLeaveFeedback}>
+        {option}
+      </button>
+    </li>
+  ));
+
+  return (
+    <>
       <section>
-        <ul style={{
-        display: 'flex',
-        marginLeft: '30px',
-        padding: '0',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}>
-          <li>
-            <button className="button" onClick={handleGoodClick}>
-              Good
-            </button>
-          </li>
-          <li>
-            <button className="button" onClick={handleNeutralClick}>Neutral</button>
-          </li>
-          <li>
-            <button className="button" onClick={handleBadClick}>Bad</button>
-          </li>
+        <ul
+          style={{
+            display: 'flex',
+            marginLeft: '30px',
+            padding: '0',
+            alignItems: 'center',
+            fontSize: 40,
+            color: '#010101',
+          }}
+        >
+          {items}
         </ul>
-        </section>
-      </>
-    );
-  }
-}
+      </section>
+    </>
+  );
+};
 
 FeedbackOptions.propTypes = {
-  handleGoodClick: PropTypes.func.isRequired,
-  handleNeutralClick: PropTypes.func.isRequired,
-  handleBadClick: PropTypes.func.isRequired,
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
